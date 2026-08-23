@@ -19,14 +19,15 @@ remote_state {
   }
 }
 
+#[why] no token attribute: the heredoc is written to provider.tf verbatim, so get_env() reached
+#   terraform, which has no such function. the provider reads GITLAB_TOKEN from the environment on
+#   its own, so naming it here buys nothing and only re-introduces that failure
 generate "provider" {
   path      = "provider.tf"
   if_exists = "overwrite_terragrunt"
 
   contents = <<EOF
-provider "gitlab" {
-  token = get_env("GITLAB_TOKEN")
-}
+provider "gitlab" {}
 EOF
 }
 

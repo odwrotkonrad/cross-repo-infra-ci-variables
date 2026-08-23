@@ -36,6 +36,13 @@ variables:
 #[why] terraform only warns on a value for an undeclared variable, so the generated files need a
 #   check that actually fails: a typo'd key would otherwise create nothing and pass green
 validate-tfvars:
+  rules:
+    - changes:
+        - live/**/*
+        - modules/**/*
+        - templates/**/*
+        - ci/**/*
+        - .gitlab-ci.yml
   stage: validate
   image: $CI_IMAGE
   script:
@@ -47,18 +54,38 @@ plan:
   image: $CI_IMAGE
   rules:
     - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+      changes:
+        - live/**/*
+        - modules/**/*
+        - templates/**/*
+        - ci/**/*
+        - .gitlab-ci.yml
   script:
-    - terragrunt run-all plan --terragrunt-non-interactive --terragrunt-working-dir live
+    - terragrunt run --all plan --non-interactive --working-dir live
 
+#[why] the applied tfvars ARE the desired state: report them so automation can shape them into the
+#   desired graph. A plain file artifact, folded into the one terminal send by emit-events
 apply:
   stage: apply
   image: $CI_IMAGE
   rules:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+      changes:
+        - live/**/*
+        - modules/**/*
+        - templates/**/*
+        - ci/**/*
+        - .gitlab-ci.yml
   script:
-    - terragrunt run-all apply --terragrunt-non-interactive --terragrunt-working-dir live
+    - terragrunt run --all apply --non-interactive --working-dir live
+    - ruby ci/desired-versions.rb extra-events.json
+  artifacts:
+    paths:
+      - extra-events.json
 
 emit-events:
   extends: .emit-events
   stage: notify
+  needs:
+    - apply
 ##[<] 🤖🤖
