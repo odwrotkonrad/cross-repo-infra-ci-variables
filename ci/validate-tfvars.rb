@@ -3,6 +3,7 @@
 #[why] terraform only warns on a value for an undeclared variable, so a typo'd key would create
 #   nothing and pass. This turns that warning into the failure the generated files need.
 require 'set'
+require_relative 'tfvars'
 ROOT = File.expand_path('..', __dir__)
 
 def declared(module_name)
@@ -10,7 +11,7 @@ def declared(module_name)
 end
 
 def keys_in(path)
-  File.readlines(path).filter_map { |line| line[/^([A-Z][A-Z0-9_]*)\s*=/, 1] }
+  Tfvars.keys(path).keys
 end
 
 failures = []
