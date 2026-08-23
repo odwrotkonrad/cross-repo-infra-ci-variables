@@ -61,7 +61,7 @@ plan:
         - ci/**/*
         - .gitlab-ci.yml
   script:
-    - terragrunt run-all plan --terragrunt-non-interactive --terragrunt-working-dir live
+    - terragrunt run --all plan --non-interactive --working-dir live
 
 #[why] the applied tfvars ARE the desired state: report them so automation can shape them into the
 #   desired graph. A plain file artifact, folded into the one terminal send by emit-events
@@ -77,7 +77,7 @@ apply:
         - ci/**/*
         - .gitlab-ci.yml
   script:
-    - terragrunt run-all apply --terragrunt-non-interactive --terragrunt-working-dir live
+    - terragrunt run --all apply --non-interactive --working-dir live
     - ruby ci/desired-versions.rb extra-events.json
   artifacts:
     paths:
