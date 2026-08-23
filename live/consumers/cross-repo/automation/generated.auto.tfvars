@@ -2,7 +2,7 @@
 project = "konradodwrot/cross-repo/automation"
 
 AI_CONFIGS_REF          = "v0.0.1"
-MISC_REF                = "v0.0.23"
-OCI_IMAGES_CI_LINUX_REF = "v0.0.124"
-PROSE_ASSETS_REF        = "v0.0.60"
-PROSE_SPEC_REF          = "v0.0.31"
+MISC_REF                = "v0.0.31"
+OCI_IMAGES_CI_LINUX_REF = "v0.0.128"
+PROSE_ASSETS_REF        = "v0.0.61"
+PROSE_SPEC_REF          = "v0.0.32"
