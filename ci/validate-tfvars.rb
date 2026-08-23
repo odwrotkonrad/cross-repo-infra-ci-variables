@@ -7,7 +7,8 @@ require_relative 'tfvars'
 ROOT = File.expand_path('..', __dir__)
 
 def declared(module_name)
-  File.read(File.join(ROOT, 'modules', module_name, 'main.tf')).scan(/^variable "([A-Z][A-Z0-9_]*)"/).flatten.to_set
+  File.read(File.join(ROOT, 'modules', module_name, 'main.tf'), encoding: 'UTF-8')
+      .scan(/^variable "([A-Z][A-Z0-9_]*)"/).flatten.to_set
 end
 
 def keys_in(path)
