@@ -2,8 +2,8 @@
 project = "konradodwrot/go-modules"
 
 AI_CONFIGS_REF               = "v0.0.1"
-CHE_PACKAGES_REF             = "v0.0.16"
-OCI_IMAGES_CI_LINUX_DIND_REF = "v0.0.124"
-OCI_IMAGES_CI_LINUX_REF      = "v0.0.124"
-PROSE_ASSETS_REF             = "v0.0.60"
-PROSE_SPEC_REF               = "v0.0.31"
+CHE_PACKAGES_REF             = "0.0.18"
+OCI_IMAGES_CI_LINUX_DIND_REF = "v0.0.128"
+OCI_IMAGES_CI_LINUX_REF      = "v0.0.128"
+PROSE_ASSETS_REF             = "v0.0.61"
+PROSE_SPEC_REF               = "v0.0.32"

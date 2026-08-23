@@ -2,5 +2,5 @@
 project = "konradodwrot/cross-repo/prose/assets"
 
 AI_CONFIGS_REF          = "v0.0.1"
-MISC_REF                = "v0.0.23"
-OCI_IMAGES_CI_LINUX_REF = "v0.0.124"
+MISC_REF                = "v0.0.31"
+OCI_IMAGES_CI_LINUX_REF = "v0.0.128"

@@ -2,5 +2,5 @@
 project = "konradodwrot/cross-repo/infra/iac"
 
 AI_CONFIGS_REF          = "v0.0.1"
-OCI_IMAGES_CI_LINUX_REF = "v0.0.124"
-PROSE_SPEC_REF          = "v0.0.31"
+OCI_IMAGES_CI_LINUX_REF = "v0.0.128"
+PROSE_SPEC_REF          = "v0.0.32"
