@@ -23,10 +23,19 @@ deliberately behind latest.
 templates/consumer-vars.tfvars.tpl   hand-edited, rendered by automation
 modules/consumer-vars/               project scope, one instance per consumer
 modules/producer-vars/               group scope, one instance total
-live/terragrunt.hcl                  backend, provider, common inputs
+modules/static-vars/                 group scope, the values nothing generates
+live/root.hcl                        backend, provider, common inputs
 live/producers/                      the group variables
 live/consumers/<repo-path>/          one unit per consumer repo
+live/static/                         pins and flags a human edits
 ```
+
+`static/` holds the group variables no release produces: the che and
+che-packages schema pins, the ci-linux image pin, and the `ENABLE_DARWIN_CI`
+and `CHE_BACKUP_AUTO_CREATE` flags. Their values live in
+`modules/static-vars/main.tf` as variable defaults, not in a tfvars file:
+everything under `live/` that automation generates is overwritten on the next
+generation, and these change only when a human decides they do.
 
 One unit per consumer repo means a regenerated file for `notes` plans and
 applies alone: it cannot surprise `go-modules`, and a broken generation for one
