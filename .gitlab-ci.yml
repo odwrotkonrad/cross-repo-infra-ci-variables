@@ -31,7 +31,7 @@ variables:
   OCI_IMAGES_CI_LINUX_REF: $GRP_KO_VAR_OCI_IMAGES_CI_LINUX_REF
   MISC_REF: $GRP_KO_VAR_MISC_REF
   CI_IMAGE: $ARTIFACT_REGISTRY/ci-linux:$OCI_IMAGES_CI_LINUX_REF
-  GITLAB_TOKEN: $REPO_VAR_CI_VARIABLES_TOKEN
+  GITLAB_TOKEN: $REPO_UNPROTECTED_VAR_BOT_CI_VARIABLES_TOKEN
 
 #[why] terraform only warns on a value for an undeclared variable, so the generated files need a
 #   check that actually fails: a typo'd key would otherwise create nothing and pass green
