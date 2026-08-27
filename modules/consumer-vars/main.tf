@@ -6,7 +6,7 @@ variable "project" {
   type = string
 }
 
-variable "AI_CONFIGS_REF" {
+variable "AI_TOOLS_CONFIGS_REF" {
   type    = string
   default = null
 }
@@ -26,7 +26,7 @@ variable "CHE_PACKAGES_REF" {
   default = null
 }
 
-variable "CONFIGS_REF" {
+variable "TOOLS_CONFIGS_REF" {
   type    = string
   default = null
 }
@@ -91,11 +91,11 @@ variable "RESUME_MD_PDF_REF" {
   default = null
 }
 
-resource "gitlab_project_variable" "ai_configs_ref" {
-  count     = var.AI_CONFIGS_REF != null ? 1 : 0
+resource "gitlab_project_variable" "ai_tools_configs_ref" {
+  count     = var.AI_TOOLS_CONFIGS_REF != null ? 1 : 0
   project   = var.project
-  key       = "REPO_VAR_AI_CONFIGS_REF"
-  value     = var.AI_CONFIGS_REF
+  key       = "REPO_VAR_AI_TOOLS_CONFIGS_REF"
+  value     = var.AI_TOOLS_CONFIGS_REF
   masked    = false
   protected = false
 }
@@ -127,11 +127,11 @@ resource "gitlab_project_variable" "che_packages_ref" {
   protected = false
 }
 
-resource "gitlab_project_variable" "configs_ref" {
-  count     = var.CONFIGS_REF != null ? 1 : 0
+resource "gitlab_project_variable" "tools_configs_ref" {
+  count     = var.TOOLS_CONFIGS_REF != null ? 1 : 0
   project   = var.project
-  key       = "REPO_VAR_CONFIGS_REF"
-  value     = var.CONFIGS_REF
+  key       = "REPO_VAR_TOOLS_CONFIGS_REF"
+  value     = var.TOOLS_CONFIGS_REF
   masked    = false
   protected = false
 }
