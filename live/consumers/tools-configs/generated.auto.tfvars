@@ -3,7 +3,7 @@ project = "konradodwrot/tools-configs"
 
 AI_TOOLS_CONFIGS_REF    = "v0.0.5"
 AUTOMATION_REF          = "v0.0.36"
-CHE_PACKAGES_REF        = "0.0.18"
+CHE_PACKAGES_REF        = "v0.0.21"
 CHE_SCHEMA_REF          = "v0.0.1-che-min-v0.0.96"
 GO_MODULES_CHE_REF      = "che/v0.0.96"
 MISC_REF                = "v0.0.42"

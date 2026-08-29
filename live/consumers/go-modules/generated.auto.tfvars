@@ -2,7 +2,7 @@
 project = "konradodwrot/go-modules"
 
 AI_TOOLS_CONFIGS_REF         = "v0.0.5"
-CHE_PACKAGES_REF             = "0.0.18"
+CHE_PACKAGES_REF             = "v0.0.21"
 MISC_REF                     = "v0.0.42"
 OCI_IMAGES_CI_LINUX_DIND_REF = "v0.0.128"
 OCI_IMAGES_CI_LINUX_REF      = "v0.0.128"
