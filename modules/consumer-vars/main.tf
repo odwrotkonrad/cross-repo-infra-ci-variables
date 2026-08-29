@@ -56,6 +56,26 @@ variable "IAC_REF" {
   default = null
 }
 
+variable "CENTRALIZED_ASSETS_GENERIC_REF" {
+  type    = string
+  default = null
+}
+
+variable "CENTRALIZED_ASSETS_PROSE_HUMAN_REF" {
+  type    = string
+  default = null
+}
+
+variable "CENTRALIZED_ASSETS_PROSE_AI_REF" {
+  type    = string
+  default = null
+}
+
+variable "CENTRALIZED_ASSETS_PROSE_COMMON_REF" {
+  type    = string
+  default = null
+}
+
 variable "MISC_REF" {
   type    = string
   default = null
@@ -205,6 +225,42 @@ resource "gitlab_project_variable" "che_schema_ref" {
   project   = var.project
   key       = "REPO_VAR_CHE_SCHEMA_REF"
   value     = var.CHE_SCHEMA_REF
+  masked    = false
+  protected = false
+}
+
+resource "gitlab_project_variable" "centralized_assets_generic_ref" {
+  count     = var.CENTRALIZED_ASSETS_GENERIC_REF != null ? 1 : 0
+  project   = var.project
+  key       = "REPO_VAR_CENTRALIZED_ASSETS_GENERIC_REF"
+  value     = var.CENTRALIZED_ASSETS_GENERIC_REF
+  masked    = false
+  protected = false
+}
+
+resource "gitlab_project_variable" "centralized_assets_prose_human_ref" {
+  count     = var.CENTRALIZED_ASSETS_PROSE_HUMAN_REF != null ? 1 : 0
+  project   = var.project
+  key       = "REPO_VAR_CENTRALIZED_ASSETS_PROSE_HUMAN_REF"
+  value     = var.CENTRALIZED_ASSETS_PROSE_HUMAN_REF
+  masked    = false
+  protected = false
+}
+
+resource "gitlab_project_variable" "centralized_assets_prose_ai_ref" {
+  count     = var.CENTRALIZED_ASSETS_PROSE_AI_REF != null ? 1 : 0
+  project   = var.project
+  key       = "REPO_VAR_CENTRALIZED_ASSETS_PROSE_AI_REF"
+  value     = var.CENTRALIZED_ASSETS_PROSE_AI_REF
+  masked    = false
+  protected = false
+}
+
+resource "gitlab_project_variable" "centralized_assets_prose_common_ref" {
+  count     = var.CENTRALIZED_ASSETS_PROSE_COMMON_REF != null ? 1 : 0
+  project   = var.project
+  key       = "REPO_VAR_CENTRALIZED_ASSETS_PROSE_COMMON_REF"
+  value     = var.CENTRALIZED_ASSETS_PROSE_COMMON_REF
   masked    = false
   protected = false
 }
