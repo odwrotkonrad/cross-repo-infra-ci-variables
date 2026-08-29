@@ -3,7 +3,7 @@ project = "konradodwrot/che-packages"
 
 CHE_PACKAGES_SCHEMA_REF      = "v0.0.1-che-min-v0.0.96"
 CHE_SCHEMA_REF               = "v0.0.1-che-min-v0.0.96"
-MISC_REF                     = "v0.0.40"
+MISC_REF                     = "v0.0.42"
 OCI_IMAGES_CI_LINUX_DIND_REF = "v0.0.128"
 OCI_IMAGES_CI_LINUX_REF      = "v0.0.128"
 PROSE_ASSETS_REF             = "v0.0.69"

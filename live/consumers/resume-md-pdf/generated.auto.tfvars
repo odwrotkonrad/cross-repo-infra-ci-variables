@@ -2,7 +2,7 @@
 project = "konradodwrot/resume-md-pdf"
 
 CHE_SCHEMA_REF          = "v0.0.1-che-min-v0.0.96"
-MISC_REF                = "v0.0.40"
+MISC_REF                = "v0.0.42"
 OCI_IMAGES_CI_LINUX_REF = "v0.0.128"
 PROSE_ASSETS_REF        = "v0.0.69"
 PROSE_SPEC_REF          = "v0.0.32"
