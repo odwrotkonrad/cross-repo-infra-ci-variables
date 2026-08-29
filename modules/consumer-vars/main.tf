@@ -61,6 +61,11 @@ variable "MISC_REF" {
   default = null
 }
 
+variable "CHE_SCHEMA_REF" {
+  type    = string
+  default = null
+}
+
 variable "NOTES_REF" {
   type    = string
   default = null
@@ -177,6 +182,15 @@ resource "gitlab_project_variable" "iac_ref" {
   project   = var.project
   key       = "REPO_VAR_IAC_REF"
   value     = var.IAC_REF
+  masked    = false
+  protected = false
+}
+
+resource "gitlab_project_variable" "che_schema_ref" {
+  count     = var.CHE_SCHEMA_REF != null ? 1 : 0
+  project   = var.project
+  key       = "REPO_VAR_CHE_SCHEMA_REF"
+  value     = var.CHE_SCHEMA_REF
   masked    = false
   protected = false
 }

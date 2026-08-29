@@ -60,6 +60,21 @@ variable "MISC_REF" {
   default = null
 }
 
+variable "CHE_SCHEMA_REF" {
+  type    = string
+  default = null
+}
+
+variable "CHE_PACKAGES_SCHEMA_REF" {
+  type    = string
+  default = null
+}
+
+variable "USER_SSH_UTIL_REF" {
+  type    = string
+  default = null
+}
+
 variable "NOTES_REF" {
   type    = string
   default = null
@@ -176,6 +191,15 @@ resource "gitlab_group_variable" "iac_ref" {
   group     = var.group
   key       = "GRP_KO_VAR_IAC_REF"
   value     = var.IAC_REF
+  masked    = false
+  protected = false
+}
+
+resource "gitlab_group_variable" "user_ssh_util_ref" {
+  count     = var.USER_SSH_UTIL_REF != null ? 1 : 0
+  group     = var.group
+  key       = "GRP_KO_VAR_USER_SSH_UTIL_REF"
+  value     = var.USER_SSH_UTIL_REF
   masked    = false
   protected = false
 }
