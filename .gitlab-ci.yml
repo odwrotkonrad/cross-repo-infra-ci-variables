@@ -52,6 +52,7 @@ validate-tfvars:
 plan:
   stage: validate
   image: $CI_IMAGE
+  resource_group: tfstate
   rules:
     - if: $CI_PIPELINE_SOURCE == "merge_request_event"
       changes:
