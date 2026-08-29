@@ -61,6 +61,7 @@ plan:
         - ci/**/*
         - .gitlab-ci.yml
   script:
+    - mkdir -p "$TF_PLUGIN_CACHE_DIR"
     - terragrunt run --all plan --non-interactive --working-dir live
 
 #[why] the applied tfvars ARE the desired state: report them so automation can shape them into the
@@ -77,6 +78,7 @@ apply:
         - ci/**/*
         - .gitlab-ci.yml
   script:
+    - mkdir -p "$TF_PLUGIN_CACHE_DIR"
     - terragrunt run --all apply --non-interactive --working-dir live
     - ruby ci/desired-versions.rb extra-events.json
   artifacts:
