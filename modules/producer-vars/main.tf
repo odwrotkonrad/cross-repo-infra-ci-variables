@@ -55,6 +55,26 @@ variable "IAC_REF" {
   default = null
 }
 
+variable "CENTRALIZED_ASSETS_GENERIC_REF" {
+  type    = string
+  default = null
+}
+
+variable "CENTRALIZED_ASSETS_PROSE_HUMAN_REF" {
+  type    = string
+  default = null
+}
+
+variable "CENTRALIZED_ASSETS_PROSE_AI_REF" {
+  type    = string
+  default = null
+}
+
+variable "CENTRALIZED_ASSETS_PROSE_COMMON_REF" {
+  type    = string
+  default = null
+}
+
 variable "MISC_REF" {
   type    = string
   default = null
@@ -200,6 +220,42 @@ resource "gitlab_group_variable" "user_ssh_util_ref" {
   group     = var.group
   key       = "GRP_KO_VAR_USER_SSH_UTIL_REF"
   value     = var.USER_SSH_UTIL_REF
+  masked    = false
+  protected = false
+}
+
+resource "gitlab_group_variable" "centralized_assets_generic_ref" {
+  count     = var.CENTRALIZED_ASSETS_GENERIC_REF != null ? 1 : 0
+  group     = var.group
+  key       = "GRP_KO_VAR_CENTRALIZED_ASSETS_GENERIC_REF"
+  value     = var.CENTRALIZED_ASSETS_GENERIC_REF
+  masked    = false
+  protected = false
+}
+
+resource "gitlab_group_variable" "centralized_assets_prose_human_ref" {
+  count     = var.CENTRALIZED_ASSETS_PROSE_HUMAN_REF != null ? 1 : 0
+  group     = var.group
+  key       = "GRP_KO_VAR_CENTRALIZED_ASSETS_PROSE_HUMAN_REF"
+  value     = var.CENTRALIZED_ASSETS_PROSE_HUMAN_REF
+  masked    = false
+  protected = false
+}
+
+resource "gitlab_group_variable" "centralized_assets_prose_ai_ref" {
+  count     = var.CENTRALIZED_ASSETS_PROSE_AI_REF != null ? 1 : 0
+  group     = var.group
+  key       = "GRP_KO_VAR_CENTRALIZED_ASSETS_PROSE_AI_REF"
+  value     = var.CENTRALIZED_ASSETS_PROSE_AI_REF
+  masked    = false
+  protected = false
+}
+
+resource "gitlab_group_variable" "centralized_assets_prose_common_ref" {
+  count     = var.CENTRALIZED_ASSETS_PROSE_COMMON_REF != null ? 1 : 0
+  group     = var.group
+  key       = "GRP_KO_VAR_CENTRALIZED_ASSETS_PROSE_COMMON_REF"
+  value     = var.CENTRALIZED_ASSETS_PROSE_COMMON_REF
   masked    = false
   protected = false
 }
