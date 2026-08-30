@@ -3,6 +3,6 @@ project = "konradodwrot/centralized/assets/generic"
 
 CENTRALIZED_ASSETS_PROSE_AI_REF     = "v0.0.3"
 CENTRALIZED_ASSETS_PROSE_COMMON_REF = "v0.0.5"
-CENTRALIZED_ASSETS_PROSE_HUMAN_REF  = "v0.0.8"
+CENTRALIZED_ASSETS_PROSE_HUMAN_REF  = "v0.0.9"
 CHE_SCHEMA_REF                      = "v0.0.9-che-min-v0.0.114"
 OCI_IMAGES_CI_LINUX_REF             = "v0.0.158"
