@@ -2,7 +2,7 @@
 project = "konradodwrot/cross-repo/infra/oci-images"
 
 AI_TOOLS_CONFIGS_REF           = "v0.0.5"
-CENTRALIZED_ASSETS_GENERIC_REF = "v0.0.7"
-CHE_SCHEMA_REF                 = "v0.0.1-che-min-v0.0.96"
-GO_MODULES_CHE_REF             = "che/v0.0.96"
+CENTRALIZED_ASSETS_GENERIC_REF = "v0.0.12"
+CHE_SCHEMA_REF                 = "v0.0.9-che-min-v0.0.114"
+GO_MODULES_CHE_REF             = "che/v0.0.117"
 PROSE_SPEC_REF                 = "v0.0.32"
