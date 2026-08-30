@@ -3,4 +3,4 @@ project = "konradodwrot/centralized/assets/prose/common"
 
 CENTRALIZED_ASSETS_GENERIC_REF = "v0.0.2"
 CHE_SCHEMA_REF                 = "v0.0.1-che-min-v0.0.96"
-OCI_IMAGES_CI_LINUX_REF        = "v0.0.152"
+OCI_IMAGES_CI_LINUX_REF        = "v0.0.154"
