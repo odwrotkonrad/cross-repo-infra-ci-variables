@@ -2,7 +2,7 @@
 project = "konradodwrot/notes"
 
 AI_TOOLS_CONFIGS_REF           = "v0.0.5"
-CENTRALIZED_ASSETS_GENERIC_REF = "v0.0.7"
-CHE_SCHEMA_REF                 = "v0.0.1-che-min-v0.0.96"
+CENTRALIZED_ASSETS_GENERIC_REF = "v0.0.12"
+CHE_SCHEMA_REF                 = "v0.0.9-che-min-v0.0.114"
 OCI_IMAGES_CI_LINUX_REF        = "v0.0.154"
 PROSE_SPEC_REF                 = "v0.0.32"
