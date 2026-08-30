@@ -3,7 +3,7 @@ project = "konradodwrot/tools-configs"
 
 AI_TOOLS_CONFIGS_REF               = "v0.0.8"
 AUTOMATION_REF                     = "v0.0.42"
-CENTRALIZED_ASSETS_GENERIC_REF     = "v0.0.12"
+CENTRALIZED_ASSETS_GENERIC_REF     = "v0.0.16"
 CENTRALIZED_ASSETS_PROSE_HUMAN_REF = "v0.0.8"
 CHE_PACKAGES_REF                   = "v0.0.21"
 CHE_SCHEMA_REF                     = "v0.0.9-che-min-v0.0.114"
