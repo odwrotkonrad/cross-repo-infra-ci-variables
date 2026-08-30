@@ -2,7 +2,7 @@
 project = "konradodwrot/go-modules"
 
 AI_TOOLS_CONFIGS_REF                = "v0.0.5"
-CENTRALIZED_ASSETS_GENERIC_REF      = "v0.0.4"
+CENTRALIZED_ASSETS_GENERIC_REF      = "v0.0.7"
 CENTRALIZED_ASSETS_PROSE_COMMON_REF = "v0.0.2"
 CENTRALIZED_ASSETS_PROSE_HUMAN_REF  = "v0.0.2"
 CHE_PACKAGES_REF                    = "v0.0.21"
