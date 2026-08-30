@@ -2,4 +2,4 @@
 project = "konradodwrot/cross-repo/prose/spec"
 
 CENTRALIZED_ASSETS_PROSE_AI_REF    = "v0.0.5"
-CENTRALIZED_ASSETS_PROSE_HUMAN_REF = "v0.0.8"
+CENTRALIZED_ASSETS_PROSE_HUMAN_REF = "v0.0.20"

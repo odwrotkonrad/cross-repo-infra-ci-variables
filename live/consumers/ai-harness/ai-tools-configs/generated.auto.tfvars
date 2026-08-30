@@ -3,6 +3,6 @@ project = "konradodwrot/ai-harness/ai-tools-configs"
 
 CENTRALIZED_ASSETS_GENERIC_REF     = "v0.0.22"
 CENTRALIZED_ASSETS_PROSE_AI_REF    = "v0.0.8"
-CENTRALIZED_ASSETS_PROSE_HUMAN_REF = "v0.0.12"
+CENTRALIZED_ASSETS_PROSE_HUMAN_REF = "v0.0.20"
 CHE_SCHEMA_REF                     = "v0.0.11-che-min-v0.0.120"
 OCI_IMAGES_CI_LINUX_REF            = "v0.0.158"
