@@ -3,5 +3,5 @@ project = "konradodwrot/resume-md-pdf"
 
 CENTRALIZED_ASSETS_GENERIC_REF = "v0.0.16"
 CHE_SCHEMA_REF                 = "v0.0.9-che-min-v0.0.114"
-OCI_IMAGES_CI_LINUX_REF        = "v0.0.156"
+OCI_IMAGES_CI_LINUX_REF        = "v0.0.158"
 PROSE_SPEC_REF                 = "v0.0.32"
