@@ -2,7 +2,7 @@
 project = "konradodwrot/ai-harness/sandbox"
 
 AI_TOOLS_CONFIGS_REF           = "v0.0.9"
-CENTRALIZED_ASSETS_GENERIC_REF = "v0.0.19"
+CENTRALIZED_ASSETS_GENERIC_REF = "v0.0.22"
 CHE_SCHEMA_REF                 = "v0.0.11-che-min-v0.0.120"
 GO_MODULES_CHE_REF             = "che/v0.0.120"
 OCI_IMAGES_CI_LINUX_REF        = "v0.0.158"
