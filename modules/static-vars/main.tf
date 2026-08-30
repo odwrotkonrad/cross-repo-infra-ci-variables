@@ -16,7 +16,7 @@ variable "group" {
 #   moves when che's schema changes shape, which is a deliberate release, not an artifact version
 variable "che_schema_ref" {
   type    = string
-  default = "v0.0.1-che-min-v0.0.96"
+  default = "v0.0.11-che-min-v0.0.120"
 }
 
 #[why] the che-packages catalog schema. A separate pin from che_schema_ref: the catalog and the
