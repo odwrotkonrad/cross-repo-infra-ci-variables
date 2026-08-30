@@ -76,11 +76,6 @@ variable "CENTRALIZED_ASSETS_PROSE_COMMON_REF" {
   default = null
 }
 
-variable "MISC_REF" {
-  type    = string
-  default = null
-}
-
 variable "CHE_SCHEMA_REF" {
   type    = string
   default = null
@@ -102,11 +97,6 @@ variable "OCI_IMAGES_CI_LINUX_DIND_REF" {
 }
 
 variable "OCI_IMAGES_CI_LINUX_REF" {
-  type    = string
-  default = null
-}
-
-variable "PROSE_ASSETS_REF" {
   type    = string
   default = null
 }
@@ -265,15 +255,6 @@ resource "gitlab_project_variable" "centralized_assets_prose_common_ref" {
   protected = false
 }
 
-resource "gitlab_project_variable" "misc_ref" {
-  count     = var.MISC_REF != null ? 1 : 0
-  project   = var.project
-  key       = "REPO_VAR_MISC_REF"
-  value     = var.MISC_REF
-  masked    = false
-  protected = false
-}
-
 resource "gitlab_project_variable" "notes_ref" {
   count     = var.NOTES_REF != null ? 1 : 0
   project   = var.project
@@ -297,15 +278,6 @@ resource "gitlab_project_variable" "oci_images_ci_linux_ref" {
   project   = var.project
   key       = "REPO_VAR_OCI_IMAGES_CI_LINUX_REF"
   value     = var.OCI_IMAGES_CI_LINUX_REF
-  masked    = false
-  protected = false
-}
-
-resource "gitlab_project_variable" "prose_assets_ref" {
-  count     = var.PROSE_ASSETS_REF != null ? 1 : 0
-  project   = var.project
-  key       = "REPO_VAR_PROSE_ASSETS_REF"
-  value     = var.PROSE_ASSETS_REF
   masked    = false
   protected = false
 }
