@@ -2,4 +2,4 @@
 project = "konradodwrot/cross-repo/prose/spec"
 
 AI_TOOLS_CONFIGS_REF    = "v0.0.8"
-OCI_IMAGES_CI_LINUX_REF = "v0.0.156"
+OCI_IMAGES_CI_LINUX_REF = "v0.0.158"
