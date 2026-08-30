@@ -2,6 +2,4 @@
 project = "konradodwrot/cross-repo/prose/spec"
 
 AI_TOOLS_CONFIGS_REF    = "v0.0.1"
-MISC_REF                = "v0.0.31"
 OCI_IMAGES_CI_LINUX_REF = "v0.0.128"
-PROSE_ASSETS_REF        = "v0.0.61"
