@@ -73,10 +73,16 @@ def unknown_key_failures
   end
 end
 
+def changed_since(base, files)
+  return files if base.nil?
+
+  files.select { |file| keys_at(base, file) != Tfvars.keys(file) }
+end
+
 def downgrade_failures(base)
   return [] if base.nil? || downgrade_marked?
 
-  Dir.glob(File.join(ROOT, CONSUMER_GLOB)).sort.flat_map do |file|
+  changed_since(base, Dir.glob(File.join(ROOT, CONSUMER_GLOB)).sort).flat_map do |file|
     held = keys_at(base, file)
     Tfvars.keys(file).filter_map do |key, version|
       next unless held[key] && (semver_key(version) <=> semver_key(held[key])).negative?
@@ -86,8 +92,8 @@ def downgrade_failures(base)
   end
 end
 
-def lockfile_failures
-  Dir.glob(File.join(ROOT, CONSUMER_GLOB)).sort.flat_map do |file|
+def lockfile_failures(base)
+  changed_since(base, Dir.glob(File.join(ROOT, CONSUMER_GLOB)).sort).flat_map do |file|
     project = Tfvars.scope(file).fetch('project')
     lockfile = lockfile_of(project)
     if lockfile.nil?
@@ -100,7 +106,8 @@ def lockfile_failures
   end
 end
 
-failures = unknown_key_failures + downgrade_failures(base_sha) + lockfile_failures
+base = base_sha
+failures = unknown_key_failures + downgrade_failures(base) + lockfile_failures(base)
 
 if failures.empty?
   puts 'every generated tfvars names only declared variables, lowers no consumer pin, matches every lockfile'
