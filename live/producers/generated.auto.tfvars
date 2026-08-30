@@ -2,7 +2,7 @@
 group = "konradodwrot"
 
 AI_SANDBOX_REF                          = "v0.0.1"
-AI_TOOLS_CONFIGS_REF                    = "v0.0.8"
+AI_TOOLS_CONFIGS_REF                    = "v0.0.9"
 AUTOMATION_REF                          = "v0.0.42"
 CENTRALIZED_ASSETS_GENERIC_REF          = "v0.0.16"
 CENTRALIZED_ASSETS_PROSE_AI_REF         = "v0.0.3"
