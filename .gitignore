@@ -7,3 +7,4 @@
 !.che/
 /shared/
 /lefthook.yml
+/.che/cheVariables.local.yml
