@@ -3,4 +3,4 @@ project = "konradodwrot/centralized/assets/prose/human"
 
 CENTRALIZED_ASSETS_GENERIC_REF = "v0.0.12"
 CHE_SCHEMA_REF                 = "v0.0.9-che-min-v0.0.114"
-OCI_IMAGES_CI_LINUX_REF        = "v0.0.154"
+OCI_IMAGES_CI_LINUX_REF        = "v0.0.155"
