@@ -50,6 +50,9 @@ validate-tfvars:
         - .gitlab-ci.yml
   stage: validate
   image: $CI_IMAGE
+  variables:
+    GIT_DEPTH: "0"
+    CONSUMER_READ_TOKEN: $GRP_KO_UNPROTECTED_VAR_BOT_GITLAB_TOKEN
   script:
     - ruby ci/validate-tfvars.rb
     - terraform fmt -check -recursive modules/
@@ -85,6 +88,8 @@ apply:
         - templates/**/*
         - ci/**/*
         - .gitlab-ci.yml
+  variables:
+    GIT_DEPTH: "0"
   script:
     - mkdir -p "$TF_PLUGIN_CACHE_DIR"
     - terragrunt run --all init --non-interactive --parallelism 1 --working-dir live
