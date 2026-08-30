@@ -3,6 +3,5 @@ project = "konradodwrot/cross-repo/misc"
 
 AI_TOOLS_CONFIGS_REF    = "v0.0.5"
 CHE_SCHEMA_REF          = "v0.0.1-che-min-v0.0.96"
-OCI_IMAGES_CI_LINUX_REF = "v0.0.128"
-PROSE_ASSETS_REF        = "v0.0.69"
+OCI_IMAGES_CI_LINUX_REF = "v0.0.151"
 PROSE_SPEC_REF          = "v0.0.32"
